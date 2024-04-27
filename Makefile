@@ -15,5 +15,6 @@ libft:
 
 fclean:
 	rm -rf *.o
+	make -C ./libft fclean
 
 .PHONY: libft
