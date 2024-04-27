@@ -43,9 +43,16 @@ fclean: clean
 	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
 	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
 	@echo "┗┛┗┛┗┛┛┗┛┗┗┛┻┛"
+	@echo
 
 clean:
 	@rm -rf *.o
+	@clear
+	@echo
+	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
+	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
+	@echo "┗┛┗┛┗┛┛┗┛┗┗┛┻┛"
+	@echo
 
 re: fclean all
 
