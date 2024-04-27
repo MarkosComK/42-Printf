@@ -22,24 +22,29 @@ $(NAME): $(OBJS)
 
 libft:
 	@make --silent -C ./libft
-	@echo "   __ _               _     _    __ "
+	@echo "$(PURPLE)   __ _               _     _    __ "
 	@echo "  / _| |_    _ __ _ _(_)_ _| |_ / _|"
 	@echo " |  _|  _|  | '_ \ '_| | ' \  _|  _|"
 	@echo " |_|  \\__|__| .__/_| |_|_||_\\__|_|  "
 	@echo "        |___|_|                     "
 	@echo
 	@echo
-	@echo "$(GREEN) Successfully compiled ft_printf."
+	@echo "$(GREEN) Successfully compiled ft_printf.$(RESET)"
 	@echo
 	@echo
 
-fclean:
-	@rm -rf *.o
+fclean: clean
+	@rm -f $(NAME)
 	@make -C ./libft fclean
 	@clear
 	@echo
 	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
 	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
 	@echo "┗┛┗┛┗┛┛┗┛┗┗┛┻┛"
+
+clean:
+	@rm -rf *.o
+
+re: fclean all
 
 .PHONY: libft
