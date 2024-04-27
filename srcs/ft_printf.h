@@ -33,9 +33,9 @@ typedef struct s_flags
 	int	point;
 }	t_flags;
 
-int		ft_printf(char *format, ...);
-void	update_struct(t_flags *flags, char *str, int *pos);
-int		print_format(t_flags *flags, char *str, int *pos, va_list args);
+int		ft_printf(const char *format, ...);
+void	update_struct(t_flags *flags, const char *str, int *pos);
+int		print_format(t_flags *flags, const char *str, int *pos, va_list args);
 int		putcharf(t_flags *flags, int c);
 int		putstrf(t_flags *flags, char *str);
 int		putstr_width(int width, char *str, int align_left);

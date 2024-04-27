@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	print_format(t_flags *flags, char *str, int *pos, va_list args)
+int	print_format(t_flags *flags, const char *str, int *pos, va_list args)
 {
 	int	count;
 

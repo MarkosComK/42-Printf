@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	update_struct(t_flags *flags, char *str, int *pos)
+void	update_struct(t_flags *flags, const char *str, int *pos)
 {
 	while (str[*pos] == '-' || str[*pos] == '+'
 		|| str[*pos] == ' ' || str[*pos] == '#')

@@ -12,15 +12,15 @@
 
 #include "ft_printf.h"
 
-int	ft_printf(char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	t_flags	flags;
 	int		i;
 	int		count;
 
-	if (!format || (format[0] == '%' && format[1] == '\0')) 
-                 return (-1);
+	if (!str || (str[0] == '%' && str[1] == '\0'))
+		return (-1);
 	i = 0;
 	count = 0;
 	va_start(args, str);
