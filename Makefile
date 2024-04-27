@@ -32,6 +32,7 @@ libft:
 	@echo "$(GREEN) Successfully compiled ft_printf.$(RESET)"
 	@echo
 	@echo
+	@cp libft/libft.a ./
 
 fclean: clean
 	@rm -f $(NAME)
