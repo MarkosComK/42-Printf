@@ -11,16 +11,18 @@ NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
 SRCS = ft_printf.c
 OBJS = $(SRCS:.c=.o)
+LIBFT = ./libft/libft.a
 
 all: $(NAME) libft 
 
-$(NAME): $(OBJS)
+$(NAME): $(LIBFT) $(OBJS)
+	@cp $(LIBFT) $(NAME)
 	@ar rcs $(NAME) $(OBJS)
 
 .c.o:
 	@cc $(FLAGS) -c $< -o $@
 
-libft:
+$(LIBFT):
 	@make --silent -C ./libft
 	@echo "$(PURPLE)   __ _               _     _    __ "
 	@echo "  / _| |_    _ __ _ _(_)_ _| |_ / _|"
@@ -32,7 +34,6 @@ libft:
 	@echo "$(GREEN) Successfully compiled ft_printf.$(RESET)"
 	@echo
 	@echo
-	@cp libft/libft.a ./
 
 fclean: clean
 	@rm -f $(NAME)
