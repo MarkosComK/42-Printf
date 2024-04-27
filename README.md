@@ -1,5 +1,7 @@
 # ft_printf
 
+[ft_printf_subject.pdf](https://github.com/MarkosComK/42-Printf/files/15138450/en.subject.pdf)
+
 For the ft_printf project of the 42 school cursus, we must recreate the famous C library printf function. This project teaches us about variadic arguments as well as structures if we plan to implement printf's extra flags.
 
 - Supported conversions: %, c, s, p, i, d, u, x, X
