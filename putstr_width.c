@@ -6,23 +6,32 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:07:51 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 16:17:49 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:02:06 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	putstr_width(int width, char *str, int minus)
+int	putstr_width(int width, char *str, int align_left)
 {
-	int	len;
-	int	count;
+	int		string_len;
+	int		printed_len;
 
-	(void) minus;
 	if (str == NULL)
 		str = "(null)";
-	len = ft_strlen(str);
-	count = 0;
-	if (len >= width)
+	string_len = (int)ft_strlen(str);
+	printed_len = 0;
+	if (string_len >= width)
 		return(ft_putstr(str));
-	return (0);
+	if (align_left == TRUE)
+	{
+		printed_len += ft_putstr(str);
+		while (printed_len < width)
+			printed_len += ft_putchar(' ');
+		return (printed_len);
+	}
+	while (printed_len < width - string_len)
+		printed_len += ft_putchar(' ');
+	printed_len += ft_putstr(str);
+	return (printed_len);
 }
