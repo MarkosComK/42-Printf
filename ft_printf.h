@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 16:16:33 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:12:59 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@
 
 typedef struct s_flags
 {
-	int	minus;
+	int	align_left;
 	int	plus;
 	int	space;
 	int	hash;
 	int	zero;
 	int	width;
-	int	prec;
+	int	precision;
 	int	point;
 }	t_flags;
 

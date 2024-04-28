@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:47:30 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 13:57:37 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:12:44 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	update_struct(t_flags *flags, char *str, int *pos)
 		|| str[*pos] == ' ' || str[*pos] == '#')
 	{
 		if (str[*pos] == '-')
-			flags -> minus = TRUE;
+			flags -> align_left = TRUE;
 		if (str[*pos] == '+')
 			flags -> plus = TRUE;
 		if (str[*pos] == ' ')
@@ -32,7 +32,7 @@ void	update_struct(t_flags *flags, char *str, int *pos)
 	if (ft_isdigit(str[*pos]) || str[*pos] == '.')
 	{
 		if (str[*pos] == '.')
-			flags -> prec = ft_atoi(&str[++*pos]) + 1;
+			flags -> precision = ft_atoi(&str[++*pos]) + 1;
 		else
 			flags -> width = ft_atoi(&str[*pos]);
 		while (ft_isdigit(str[*pos]))
