@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 12:25:45 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:55:10 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+
+# define TRUE 1
+# define FALSE 0
 
 typedef struct s_flags
 {
@@ -32,5 +35,8 @@ typedef struct s_flags
 
 int	ft_printf(char *format, ...);
 int	ft_putchar(const char c);
+void	update_struct(t_flags *flags, char *str, int *pos);
+int	print_format(t_flags *flags, char *str, int *pos, va_list args);
+int	putcharf(t_flags *flags, int c);
 
 #endif
