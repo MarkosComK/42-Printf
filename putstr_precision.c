@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putstrf.c                                          :+:      :+:    :+:   */
+/*   putstr_precsion.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 15:44:44 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:18:50 by marsoare         ###   ########.fr       */
+/*   Created: 2024/04/28 17:18:59 by marsoare          #+#    #+#             */
+/*   Updated: 2024/04/28 17:25:30 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	putstrf(t_flags *flags, char *str)
+int	putstr_precision(int precision, char *str)
 {
-	if (flags -> width > 0)
-		return (putstr_width(flags -> width, str, flags -> align_left));
-	if (flags -> precision > 0)
-		return (putstr_precision(flags -> precision - 1, str));
-	return (ft_putstr(str));
+	int	total_printed;
+
+	total_printed = 0;
+	if (str == NULL)
+	{
+		str = "(null)";
+		if (precision < 6)
+			precision = 0;
+	}
+	while (str[total_printed] && total_printed < precision)
+		total_printed += ft_putchar(str[total_printed]);
+	return (total_printed);
 }

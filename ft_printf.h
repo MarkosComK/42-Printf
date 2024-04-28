@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:13:57 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:25:14 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ int		print_format(t_flags *flags, char *str, int *pos, va_list args);
 int		putcharf(t_flags *flags, int c);
 int		putstrf(t_flags *flags, char *str);
 int		putstr_width(int width, char *str, int align_left);
+int		putstr_precision(int precision, char *str);
 
 #endif
