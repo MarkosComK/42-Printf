@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 13:55:10 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:56:50 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ typedef struct s_flags
 	int	point;
 }	t_flags;
 
-int	ft_printf(char *format, ...);
-int	ft_putchar(const char c);
+int		ft_printf(char *format, ...);
+int		ft_putchar(const char c);
 void	update_struct(t_flags *flags, char *str, int *pos);
-int	print_format(t_flags *flags, char *str, int *pos, va_list args);
-int	putcharf(t_flags *flags, int c);
+int		print_format(t_flags *flags, char *str, int *pos, va_list args);
+int		putcharf(t_flags *flags, int c);
 
 #endif
