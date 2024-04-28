@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:47:30 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 13:54:54 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:57:37 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	update_struct(t_flags *flags, char *str, int *pos)
 		if (str[*pos] == '-')
 			flags -> minus = TRUE;
 		if (str[*pos] == '+')
-			flags -> plus =  TRUE;
+			flags -> plus = TRUE;
 		if (str[*pos] == ' ')
 			flags -> space = TRUE;
 		if (str[*pos] == '#')
