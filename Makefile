@@ -9,7 +9,7 @@ TITLE = $(shell printf "\33[32;40m")
 
 NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c putchar.c update_struct.c print_format.c putcharf.c
+SRCS = ft_printf.c update_struct.c print_format.c putcharf.c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 
