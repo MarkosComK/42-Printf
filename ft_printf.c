@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:49:01 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 12:23:49 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:55:44 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ int	ft_printf(char *str, ...)
 		ft_bzero(&flags, sizeof(t_flags));
 		if (str[i] == '%')
 		{
-			ft_putchar('%');
+			i++;
+			while (ft_memchr("-0.# +", str[i], 6) || ft_isdigit(str[i]))
+				update_struct(&flags, str, &i);
+			count += print_format(&flags, str, &i, args);
 		}
 		count += ft_putchar(str[i]);
 		i++;
