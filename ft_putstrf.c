@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_format.c                                     :+:      :+:    :+:   */
+/*   ft_putstrf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 13:27:59 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 15:47:19 by marsoare         ###   ########.fr       */
+/*   Created: 2024/04/28 15:44:44 by marsoare          #+#    #+#             */
+/*   Updated: 2024/04/28 15:46:44 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_format(t_flags *flags, char *str, int *pos, va_list args)
+int	putstrf(t_flags *flags, va_list args)
 {
-	int	count;
 
-	count = 0;
-	if (str[*pos] == 'c')
-		count += putcharf(flags, va_arg(args, int));
-	if (str[*pos] == 's')
-		count += putstrf(flags, va_arg(args, char *));
-	(*pos)++;
-	return (count);
 }

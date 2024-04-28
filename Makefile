@@ -8,8 +8,8 @@ PURPLE = $(shell printf "\33[35m")
 TITLE = $(shell printf "\33[32;40m")
 
 NAME = libftprintf.a
-FLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c update_struct.c print_format.c putcharf.c
+FLAGS = -Wall -Wextra -Werror -g
+SRCS = ft_printf.c update_struct.c print_format.c putcharf.c putstr_width.c putstrf.c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 
