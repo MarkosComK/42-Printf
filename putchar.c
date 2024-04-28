@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   putchar.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
+/*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:21:53 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 12:24:25 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:59:20 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(const char c)
+int	putchar(const char c)
 {
 	write(1, &c, 1);
 	return (1);

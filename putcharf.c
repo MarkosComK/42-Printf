@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 13:34:59 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 13:53:48 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/28 14:00:59 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ int	putcharf(t_flags *flags, int c)
 	count = 0;
 	if (flags -> minus == TRUE)
 	{
-		count += ft_putchar(c);
+		count += putchar(c);
 		flags -> width -= 1;
 		while (flags -> width > 0)
 		{
-			count += ft_putchar(' ');
+			count += putchar(' ');
 			flags -> width -= 1;
 		}
 		return (count);
 	}
 	while (flags -> width > 1)
 	{
-		count += ft_putchar(' ');
+		count += putchar(' ');
 		flags -> width -= 1;
 	}
-	count += ft_putchar(c);
+	count += putchar(c);
 	return (count);
 }
