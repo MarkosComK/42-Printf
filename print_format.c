@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 13:27:59 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 21:35:53 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:28:19 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	print_format(t_flags *flags, char *str, int *pos, va_list args)
 		count += putstrf(flags, va_arg(args, char *));
 	if (str[*pos] == 'p')
 		count += print_ptr(flags, va_arg(args, size_t));
+	if (str[*pos] == 'd' || str[*pos] == 'i')
+		count += print_decimal(flags, va_arg(args, int));
 	(*pos)++;
 	return (count);
 }
