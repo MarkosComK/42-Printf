@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:01:52 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/29 13:21:10 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/29 13:41:56 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	print_ptr_spaces(int width, int align_left, int number)
 		while (width > string_len)
 			string_len += ft_putchar(' ');
 		return (string_len);
-	}	
+	}
 	while (string_len < width)
 		string_len += ft_putchar(' ');
 	ft_putstr("0x");
