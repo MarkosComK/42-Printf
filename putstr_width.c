@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:07:51 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:02:06 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:22:17 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	putstr_width(int width, char *str, int align_left)
 	string_len = (int)ft_strlen(str);
 	printed_len = 0;
 	if (string_len >= width)
-		return(ft_putstr(str));
+		return (ft_putstr(str));
 	if (align_left == TRUE)
 	{
 		printed_len += ft_putstr(str);

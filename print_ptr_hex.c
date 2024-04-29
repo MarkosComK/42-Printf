@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:58:57 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/29 13:05:48 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:23:01 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ int	print_ptr_hex(int number, char x)
 	printed += print_ptr_hex(number % 16, x);
 	return (printed);
 }
-

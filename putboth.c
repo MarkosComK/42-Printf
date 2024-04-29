@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:08:57 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 21:22:56 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:16:22 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	putboth(int	width, int precision, char *str, int align_left)
+int	putboth(int width, int precision, char *str, int align_left)
 {
 	int	string_len;
 	int	count;
