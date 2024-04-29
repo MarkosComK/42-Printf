@@ -52,7 +52,6 @@ The function is written in C language and thus needs the **`gcc` compiler** and 
 
 ### Instructions
 
-## Usage
 
 ``make`` to compile.
 
@@ -79,6 +78,8 @@ Output should be:
 ```
 Testing ft_printf!
 ```
+
+## Testing
 
 #### WHY NOT ASSEMBLY?
 
