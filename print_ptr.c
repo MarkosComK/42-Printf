@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:42:12 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 22:08:03 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/04/29 13:12:08 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ int	print_ptr(t_flags *flags, int number)
 		if (flags -> align_left)
 		{
 			ft_putstr("(nil)");
-			while (len < flags -> width)
-				len += ft_putchar(' ');
-			return (len);
+			while (string_len < flags -> width)
+				string_len += ft_putchar(' ');
+			return (string_len);
 		}
 	}
 	if (flags -> width > 0)
 		return (print_ptr_spaces(flags -> width, flags -> align_left, number));
 	string_len += ft_putstr("0x");
-	string_len += print_hex(number, 'x');
+	string_len += print_ptr_hex(number, 'x');
 	return (string_len);
 }
