@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:30:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/01 12:26:52 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:05:31 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_decimal(t_flags *flags, int number)
+int	print_decimal(t_flags *flags, long number)
 {
 	char	prefix;
 	char	sign;

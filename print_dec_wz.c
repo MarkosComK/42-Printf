@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_decimal_prec.c                               :+:      :+:    :+:   */
+/*   print_dec_wz.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 12:38:31 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/01 14:21:41 by marsoare         ###   ########.fr       */
+/*   Created: 2024/05/01 14:07:08 by marsoare          #+#    #+#             */
+/*   Updated: 2024/05/01 14:29:12 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_decimal_prec(long number, int prec, char sign)
+int	print_dec_wz(long number, int prec)
 {
 	int	count;
 	int	len;
 
 	count = 0;
 	len = numlen(number);
-	if (number == 0 && prec == 0)
-		return (0);
 	if (number < 0)
-		return (print_dec_wz(number, prec + 1));
-	if (sign == '+' || sign == ' ')
-		count += ft_putchar(sign);
-	while (count < prec - len)
+	{
+		count += ft_putchar('-');
+		number = -number;
+	}
+	while (count < len - prec)
 		count += ft_putchar('0');
-	return (count += print_unsigned_dec(number));
+	count += print_unsigned_dec(number);
+	return (count);
 }
