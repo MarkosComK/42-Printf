@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 12:14:04 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/01 12:18:28 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/01 12:32:20 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ int	print_unsigned_dec(unsigned int number)
 	count = 0;
 	if (number < 10)
 	{
+		count++;
 		ft_putchar(number + 48);
-		return ;
+		return (count);
 	}
-	print_unsigned_dec(number / 10);
-	print_unsigned_dec(number % 10);
-	return (0);
+	count += print_unsigned_dec(number / 10);
+	count += print_unsigned_dec(number % 10);
+	return (count);
 }
