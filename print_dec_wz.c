@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:07:08 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/04 19:23:51 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/04 21:01:04 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	print_dec_wz(long number, int prec)
 		count += ft_putchar('-');
 		number = -number;
 	}
-	while (count < prec - len)
+	while (count < prec - len - 1)
 		count += ft_putchar('0');
 	count += print_unsigned_dec(number);
 	return (count);
