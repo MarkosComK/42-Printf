@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/01 14:19:47 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/04 15:27:21 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int		print_ptr_hex(int number, char x);
 int		ptr_len(int number);
 int		print_decimal(t_flags *flags, long number);
 int		print_decimal_left(long number, int width, int prec, char sign);
-int		print_unsigned_dec(unsigned int number);
+int		print_unsigned_dec(long number);
 int		print_decimal_prec(long number, int prec, char sign);
 int		print_dec_wz(long number, int prec);
 int		numlen(long number);
