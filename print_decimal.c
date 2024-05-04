@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:30:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/04 19:05:16 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:38:29 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,9 @@ int	print_decimal(t_flags *flags, long number)
 		return (print_dec_wp(number, flags->width, flags->precision - 1, sign));
 	if (flags -> precision)
 		return (print_dec_wp(number, flags->width, flags->precision - 1, sign));
+	if (number < 0)
+		return (ft_putnbr(number));
+	if (sign == '+' || sign == '-')
+		return (ft_putchar(sign) + print_unsigned_dec(number));
 	return (print_unsigned_dec(number));
 }
