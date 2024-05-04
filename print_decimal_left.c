@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:58:30 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/01 13:17:36 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/04 18:56:56 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	print_decimal_left(long number, int width, int prec, char sign)
 			count += ft_putchar('0');
 		while (count < width)
 			count += ft_putchar(' ');
-	return (count);
+		return (count);
 	}
 	count += print_decimal_prec(number, prec, sign);
 	while (count < width)
