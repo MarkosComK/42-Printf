@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 13:27:59 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/04 21:39:57 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:12:39 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	print_format(t_flags *flags, char *str, int *pos, va_list args)
 	if (str[*pos] == 'u')
 		count += print_decimal(flags, va_arg(args, unsigned int));
 	if (str[*pos] == 'x' || str[*pos] == 'X')
-		count += print_hexa(flags, va_arg(args, unsigned int), char[*pos]);
+		count += print_hexa(flags, va_arg(args, unsigned int), str[*pos]);
 	(*pos)++;
 	return (count);
 }

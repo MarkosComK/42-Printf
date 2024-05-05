@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/04 20:51:45 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:33:03 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ int		print_dec_wz(long number, int prec);
 int		numlen(long number);
 int		print_dec_wp(long number, int width, int prec, char sign);
 int		print_dec_wp2(long number, int width, int prec, char sign);
+int		print_hexa_prec(int prec, long number, char x);
 
 #endif
