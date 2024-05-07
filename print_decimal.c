@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:30:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/05 11:45:13 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/08 00:55:54 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 int	print_decimal(t_flags *flags, long number)
 {
-	//char	prefix;
 	char	sign;
 
-	//prefix = ' ';
 	sign = '-';
 	if (flags -> space)
 		sign = ' ';
-	//if (flags -> zero)
-		//prefix = '0';
 	if (flags -> plus)
 		sign = '+';
 	if (flags -> align_left)
