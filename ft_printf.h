@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:16:13 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/05 11:41:40 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:15:07 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ int		print_dec_wp2(long number, int width, int prec, char sign);
 int		print_hexa(t_flags *flags, long number, char x);
 int		print_hexa_left(t_flags *flags, long number, char x);
 int		print_hexa_prec(int prec, long number, char x);
+int		print_hexa_hash(t_flags *flags, long number, char x, char pref);
 
 #endif
