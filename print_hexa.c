@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 11:12:50 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/08 01:18:58 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:29:11 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	print_hexa(t_flags *flags, long number, char x)
 {
 	char	pref;
+	int		len;
 
 	pref = ' ';
 	if (flags -> zero)
@@ -27,5 +28,9 @@ int	print_hexa(t_flags *flags, long number, char x)
 		return (print_hexa_hash(flags, number, x, pref));
 	if (flags -> width)
 		return (print_hexa_width(flags, number, x, pref));
-	return (0);
+	if (flags -> precision)
+		return (print_hexa_prec(flags -> precision - 1, number, x));
+	len = ptr_len(number);
+	print_ptr_hex(number, x);
+	return (len);
 }
