@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:58:57 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/08 01:46:53 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:51:24 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	print_ptr_hex(long number, char x)
 	int	printed;
 
 	printed = 0;
-	if (number < 0)
-		number = -number;
 	if (number < 16)
 	{
 		if (x == 'x')
