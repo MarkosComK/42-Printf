@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:05:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/08 01:40:55 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:55:21 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ptr_len(long number)
+int	ptr_len(long number)
 {
 	int	i;
 
