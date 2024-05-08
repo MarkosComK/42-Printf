@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 01:07:31 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/08 01:14:17 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:53:13 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	print_hexa_hash(t_flags *flags, long number, char x, char pref)
 		count += print_hexa_prec(flags -> precision - 1, number, x);
 		return (count);
 	}
-	while (count <  flags -> width - 2 - len)
+	while (count < flags -> width - 2 - len)
 		count += ft_putchar(pref);
 	if (number != 0)
-		count += ft_putchar('0') +  ft_putchar(x);
+		count += ft_putchar('0') + ft_putchar(x);
 	count += print_hexa_prec(flags -> precision - 1, number, x);
 	return (count);
 }
