@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 12:14:04 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/01 15:08:51 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 11:24:21 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_unsigned_dec(long number)
+int	print_unsigned_dec(size_t number)
 {
 	int	count;
 
