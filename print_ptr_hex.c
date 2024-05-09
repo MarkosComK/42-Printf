@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:58:57 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/08 01:51:24 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 01:02:35 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_ptr_hex(long number, char x)
+int	print_ptr_hex(size_t number, char x)
 {
 	int	printed;
 

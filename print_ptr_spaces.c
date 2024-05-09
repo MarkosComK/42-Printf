@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:01:52 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/29 13:41:56 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 01:04:23 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_ptr_spaces(int width, int align_left, int number)
+int	print_ptr_spaces(int width, int align_left, size_t number)
 {
 	int	string_len;
 

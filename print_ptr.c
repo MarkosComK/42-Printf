@@ -6,13 +6,13 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:42:12 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/29 13:12:08 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 01:01:08 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_ptr(t_flags *flags, int number)
+int	print_ptr(t_flags *flags, size_t number)
 {
 	int	string_len;
 
