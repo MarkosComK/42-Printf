@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:30:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/09 02:36:44 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 10:27:02 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	print_decimal(t_flags *flags, long number)
 	if (flags -> width > 0 && flags -> precision > 0)
 		return (print_dec_wp(number, flags->width, flags->precision - 1, sign));
 	if (flags -> width)
-		return (print_dec_wz(number, flags->width, flags->precision - 1));
+		return (print_dec_width(number, flags->width, pref, sign));
 	if (flags -> precision)
 		return (print_dec_wp(number, flags->width, flags->precision - 1, sign));
 	if (number < 0)
