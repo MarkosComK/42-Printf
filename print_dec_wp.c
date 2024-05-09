@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 15:39:56 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/04 19:21:42 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 02:26:28 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	print_dec_wp(long number, int width, int prec, char sign)
 		return (print_dec_wp2(number, width, prec, sign));
 	len = numlen(number);
 	if (number == 0)
-		len = 0;
+		len = 1;
 	if (prec > len)
 		len = prec;
 	while (count < width - len)

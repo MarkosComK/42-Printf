@@ -37,6 +37,8 @@ $(LIBFT):
 	@echo
 	@echo
 
+bonus: $(NAME)
+
 fclean: clean
 	@rm -f $(NAME)
 	@make -C ./libft fclean

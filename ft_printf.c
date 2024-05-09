@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:49:01 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 14:08:40 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/09 02:27:47 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	ft_printf(char *str, ...)
 				update_struct(&flags, str, &i);
 			count += print_format(&flags, str, &i, args);
 		}
-		count += ft_putchar(str[i]);
-		i++;
+		else
+			count += ft_putchar(str[i++]);
 	}
 	va_end(args);
 	return (count);
