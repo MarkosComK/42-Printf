@@ -8,7 +8,7 @@ PURPLE = $(shell printf "\33[35m")
 TITLE = $(shell printf "\33[32;40m")
 
 NAME = libftprintf.a
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 SRCS = ft_printf.c update_struct.c print_format.c putcharf.c putstr_width.c putstrf.c\
 	   putstr_precision.c putboth.c print_ptr.c print_ptr_spaces.c print_ptr_hex.c\
 	   ptr_len.c print_decimal.c print_decimal_left.c print_unsigned_dec.c print_decimal_prec.c print_dec_width.c print_dec_width2.c numlen.c print_dec_wz.c print_dec_wp.c print_dec_wp2.c print_hexa.c print_hexa_left.c print_hexa_prec.c print_hexa_hash.c print_hexa_width.c
