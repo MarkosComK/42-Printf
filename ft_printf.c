@@ -19,6 +19,8 @@ int	ft_printf(char *str, ...)
 	int		i;
 	int		count;
 
+	if (!format || (format[0] == '%' && format[1] == '\0')) 
+                 return (-1);
 	i = 0;
 	count = 0;
 	va_start(args, str);
