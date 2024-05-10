@@ -81,6 +81,8 @@ Testing ft_printf!
 
 ## Testing
 
+* [ft_printf_test](https://github.com/cacharle/ft_printf_test)
+
 #### WHY NOT ASSEMBLY?
 
 ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>.>---.++++++++++++.++.+++
