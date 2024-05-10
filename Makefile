@@ -9,9 +9,13 @@ TITLE = $(shell printf "\33[32;40m")
 
 NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c update_struct.c print_format.c putcharf.c putstr_width.c putstrf.c\
-	   putstr_precision.c putboth.c print_ptr.c print_ptr_spaces.c print_ptr_hex.c\
-	   ptr_len.c print_decimal.c print_decimal_left.c print_unsigned_dec.c print_decimal_prec.c print_dec_width.c print_dec_width2.c numlen.c print_dec_wz.c print_dec_wp.c print_dec_wp2.c print_hexa.c print_hexa_left.c print_hexa_prec.c print_hexa_hash.c print_hexa_width.c
+SRCSDIR = ./srcs/
+SRCS = ft_printf.c ./srcs/update_struct.c ./srcs/print_format.c ./srcs/putcharf.c ./srcs/putstr_width.c ./srcs/putstrf.c\
+	   ./srcs/putstr_precision.c ./srcs/putboth.c ./srcs/print_ptr.c ./srcs/print_ptr_spaces.c ./srcs/print_ptr_hex.c\
+	   ./srcs/ptr_len.c ./srcs/print_decimal.c ./srcs/print_decimal_left.c ./srcs/print_unsigned_dec.c ./srcs/print_decimal_prec.c\
+	   ./srcs/print_dec_width.c ./srcs/print_dec_width2.c ./srcs/numlen.c ./srcs/print_dec_wz.c ./srcs/print_dec_wp.c\
+	   ./srcs/print_dec_wp2.c ./srcs/print_hexa.c ./srcs/print_hexa_left.c ./srcs/print_hexa_prec.c ./srcs/print_hexa_hash.c\
+	   ./srcs/print_hexa_width.c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 
@@ -51,6 +55,7 @@ fclean: clean
 
 clean:
 	@rm -rf *.o
+	@rm -rf ./srcs/*.o
 	@clear
 	@echo
 	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
