@@ -30,36 +30,16 @@ $(NAME): $(LIBFT) $(OBJS)
 
 $(LIBFT):
 	@make --silent -C ./libft
-	@echo "$(PURPLE)   __ _               _     _    __ "
-	@echo "  / _| |_    _ __ _ _(_)_ _| |_ / _|"
-	@echo " |  _|  _|  | '_ \ '_| | ' \  _|  _|"
-	@echo " |_|  \\__|__| .__/_| |_|_||_\\__|_|  "
-	@echo "        |___|_|                     "
-	@echo
-	@echo
-	@echo "$(GREEN) Successfully compiled ft_printf.$(RESET)"
-	@echo
-	@echo
 
 bonus: $(NAME)
 
 fclean: clean
 	@rm -f $(NAME)
 	@make -C ./libft fclean
-	@echo
-	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
-	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
-	@echo "┗┛┗┛┗┛┛┗┛┗┗┛┻┛"
-	@echo
 
 clean:
 	@rm -rf *.o
 	@rm -rf ./srcs/*.o
-	@echo
-	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
-	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
-	@echo "┗┛┗┛┗┛┛┗┛┗┗┛┻┛"
-	@echo
 
 re: fclean all
 
