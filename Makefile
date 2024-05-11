@@ -22,24 +22,25 @@ LIBFT = ./libft/libft.a
 all: $(NAME) libft 
 
 $(NAME): $(LIBFT) $(OBJS)
-	@cp $(LIBFT) $(NAME)
-	@ar rcs $(NAME) $(OBJS)
+	cp $(LIBFT) $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 .c.o:
-	@cc $(FLAGS) -c $< -o $@
+	cc $(FLAGS) -c $< -o $@
 
 $(LIBFT):
-	@make --silent -C ./libft
+	make --silent -C ./libft
 
 bonus: $(NAME)
 
 fclean: clean
-	@rm -f $(NAME)
-	@make -C ./libft fclean
+	rm -f $(NAME)
+	make -C ./libft fclean
 
 clean:
-	@rm -rf *.o
-	@rm -rf ./srcs/*.o
+	rm -rf *.o
+	rm -rf ./srcs/*.o
+	make -C ./libft clean
 
 re: fclean all
 
