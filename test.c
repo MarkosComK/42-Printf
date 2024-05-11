@@ -6,7 +6,7 @@
 /*   By: nnuno-ca <nnuno-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:48:46 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2024/05/10 16:29:09 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/11 14:21:57 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -655,5 +655,23 @@ int main(void)
 	ft_printf("OUTPUT FT = %d\n", output_FT);
 
 	ft_printf("\n");
+/////////////////////////////////
+//		% EMPTY VALUES TEST	   //
+/////////////////////////////////
+	ft_printf("-----------------------------------EMPTY STR----------------------------\n");
+	output_OG = printf("");
+	ft_printf("\n");
+	output_FT = ft_printf("");
+	printf("OUTPUT OG = %d\n", output_OG);
+	ft_printf("OUTPUT FT = %d\n", output_FT);
+
+	ft_printf("\n");
+
+	ft_printf("-----------------------------------%% ALONE----------------------------\n");
+	output_OG = printf("%");
+	ft_printf("\n");
+	output_FT = ft_printf("%");
+	printf("OUTPUT OG = %d\n", output_OG);
+	ft_printf("OUTPUT FT = %d\n", output_FT);
 	return (0);
 }
