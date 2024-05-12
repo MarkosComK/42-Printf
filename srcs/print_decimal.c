@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:30:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/12 18:13:03 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:38:07 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,20 +128,4 @@ int	print_dec_width(long number, int width, char pref, char sign)
 	while (count < width - len)
 		count += ft_putchar(pref);
 	return (count + print_unsigned_dec(number));
-}
-
-int	print_unsigned_dec(size_t number)
-{
-	int	count;
-
-	count = 0;
-	if (number < 10)
-	{
-		count++;
-		ft_putchar(number + 48);
-		return (count);
-	}
-	count += print_unsigned_dec(number / 10);
-	count += print_unsigned_dec(number % 10);
-	return (count);
 }

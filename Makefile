@@ -11,7 +11,7 @@ NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
 SRCS = ft_printf.c ./srcs/putcharf.c ./srcs/putstrf.c\
 	   ./srcs/print_ptr.c ./srcs/print_ptr_hex.c\
-	   ./srcs/ptr_len.c ./srcs/print_decimal.c\
+	   ./srcs/ptr_len.c ./srcs/print_decimal.c ./srcs/print_unsigned_dec.c\
 	   ./srcs/print_dec_width2.c ./srcs/numlen.c ./srcs/print_dec_wz.c\
 	   ./srcs/print_dec_wp2.c ./srcs/print_hexa.c
 OBJS = $(SRCS:.c=.o)
