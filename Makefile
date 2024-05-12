@@ -55,6 +55,7 @@ fclean: clean
 clean:
 	@rm -rf *.o
 	@rm -rf ./srcs/*.o
+	@make -C ./libft clean
 	@echo
 	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
 	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
