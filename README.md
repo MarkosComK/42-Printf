@@ -2,10 +2,11 @@
 	42cursus ft_printf()
 </h1>
 
+![ftprintf](https://github.com/MarkosComK/42-Printf/assets/67120870/59ce02c6-dd73-4893-9459-7be599ded8f6)
+
 <p align="center">
 	<b><i>Development repo for 42cursus ft_printf project</i></b><br>
 </p>
-
 
 <h3 align="center">
 	<a href="#%EF%B8%8F-about">About</a>
@@ -19,6 +20,9 @@
 
 ---
 <br>
+<div align="center">
+	<img src="https://github.com/MarkosComK/42-Printf/assets/67120870/432e5973-f6ef-402b-b2b6-8808e8c03f73">
+</div>
 
 ## 🗣️ About
 
