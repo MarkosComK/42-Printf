@@ -24,6 +24,8 @@
 	<img src="https://github.com/MarkosComK/42-Printf/assets/67120870/432e5973-f6ef-402b-b2b6-8808e8c03f73">
 </div>
 
+## This is a project in daily use. If you want to see the project that i have been evaluated in 42school click in releases at the right side!
+
 ## 🗣️ About
 
 > _The aim of this project is to code a printf() function that will behave as close as possible from the original printf() from &lt;stdio.h&gt;
