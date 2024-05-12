@@ -6,7 +6,7 @@
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:30:55 by marsoare          #+#    #+#             */
-/*   Updated: 2024/05/12 18:07:42 by marsoare         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:13:03 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,24 @@ int	print_decimal_left(long number, int width, int prec, char sign)
 	while (count < width)
 		count += ft_putchar(' ');
 	return (count);
+}
+
+int	print_decimal_prec(long number, int prec, char sign)
+{
+	int	count;
+	int	len;
+
+	count = 0;
+	len = numlen(number);
+	if (number == 0 && prec == 0)
+		return (0);
+	if (number < 0)
+		return (print_dec_wz(number, prec + 1));
+	if (sign == '+' || sign == ' ')
+		count += ft_putchar(sign);
+	while (count < prec - len)
+		count += ft_putchar('0');
+	return (count + print_unsigned_dec(number));
 }
 
 int	print_dec_wp(long number, int width, int prec, char sign)
