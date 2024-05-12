@@ -43,7 +43,8 @@ bonus: $(NAME)
 
 fclean: clean
 	@rm -f $(NAME)
-	@make -C ./libft fclean
+	@make --silent -C ./libft fclean
+	@clear
 	@echo
 	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
 	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
@@ -53,7 +54,8 @@ fclean: clean
 clean:
 	@rm -rf *.o
 	@rm -rf ./srcs/*.o
-	@make -C ./libft clean
+	@make --silent -C ./libft clean
+	@clear
 	@echo
 	@echo "$(RED)┏┓┓ ┏┓┏┓┳┓┏┓┳┓"
 	@echo "┃ ┃ ┣ ┣┫┃┃┣ ┃┃"
