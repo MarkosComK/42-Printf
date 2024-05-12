@@ -9,9 +9,8 @@ TITLE = $(shell printf "\33[32;40m")
 
 NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
-SRCSDIR = ./srcs/
-SRCS = ft_printf.c ./srcs/update_struct.c ./srcs/print_format.c ./srcs/putcharf.c ./srcs/putstr_width.c ./srcs/putstrf.c\
-	   ./srcs/putstr_precision.c ./srcs/putboth.c ./srcs/print_ptr.c ./srcs/print_ptr_spaces.c ./srcs/print_ptr_hex.c\
+SRCS = ft_printf.c ./srcs/putcharf.c ./srcs/putstrf.c\
+	   ./srcs/print_ptr.c ./srcs/print_ptr_hex.c\
 	   ./srcs/ptr_len.c ./srcs/print_decimal.c ./srcs/print_decimal_left.c ./srcs/print_unsigned_dec.c ./srcs/print_decimal_prec.c\
 	   ./srcs/print_dec_width.c ./srcs/print_dec_width2.c ./srcs/numlen.c ./srcs/print_dec_wz.c ./srcs/print_dec_wp.c\
 	   ./srcs/print_dec_wp2.c ./srcs/print_hexa.c ./srcs/print_hexa_left.c ./srcs/print_hexa_prec.c ./srcs/print_hexa_hash.c\
