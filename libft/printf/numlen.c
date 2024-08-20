@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   numlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 14:17:58 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:28:55 by marsoare         ###   ########.fr       */
+/*   Created: 2024/05/01 13:36:03 by marsoare          #+#    #+#             */
+/*   Updated: 2024/05/04 19:21:06 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	numlen(long number)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	while (str[i])
-		write(1, &str[i++], 1);
-	return (i);
+	len = 1;
+	if (number < 0)
+		number = -number;
+	while (number > 9)
+	{
+		len++;
+		number /= 10;
+	}
+	return (len);
 }

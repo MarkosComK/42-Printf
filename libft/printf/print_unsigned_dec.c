@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   print_unsigned_dec.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 14:17:58 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:28:55 by marsoare         ###   ########.fr       */
+/*   Created: 2024/05/12 18:37:42 by marsoare          #+#    #+#             */
+/*   Updated: 2024/05/12 18:38:02 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	print_unsigned_dec(size_t number)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	while (str[i])
-		write(1, &str[i++], 1);
-	return (i);
+	count = 0;
+	if (number < 10)
+	{
+		count++;
+		ft_putchar(number + 48);
+		return (count);
+	}
+	count += print_unsigned_dec(number / 10);
+	count += print_unsigned_dec(number % 10);
+	return (count);
 }

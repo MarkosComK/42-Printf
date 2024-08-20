@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ptr_len.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: marsoare <marsoare@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 14:17:58 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:28:55 by marsoare         ###   ########.fr       */
+/*   Created: 2024/04/29 13:05:55 by marsoare          #+#    #+#             */
+/*   Updated: 2024/05/09 01:03:42 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ptr_len(size_t number)
 {
 	int	i;
 
 	i = 0;
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	while (str[i])
-		write(1, &str[i++], 1);
+	if (number < 16)
+		return (i += 1);
+	i += ptr_len(number / 16);
+	i += ptr_len(number % 16);
 	return (i);
 }

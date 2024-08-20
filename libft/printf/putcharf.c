@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   putcharf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 14:17:58 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:28:55 by marsoare         ###   ########.fr       */
+/*   Created: 2024/04/28 13:34:59 by marsoare          #+#    #+#             */
+/*   Updated: 2024/04/28 20:34:52 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	putcharf(t_flags *flags, int c)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	while (str[i])
-		write(1, &str[i++], 1);
-	return (i);
+	count = 0;
+	if (flags -> align_left == TRUE)
+	{
+		count += ft_putchar(c);
+		flags -> width -= 1;
+		while (flags -> width > 0)
+		{
+			count += ft_putchar(' ');
+			flags -> width -= 1;
+		}
+		return (count);
+	}
+	while (flags -> width > 1)
+	{
+		count += ft_putchar(' ');
+		flags -> width -= 1;
+	}
+	count += ft_putchar(c);
+	return (count);
 }

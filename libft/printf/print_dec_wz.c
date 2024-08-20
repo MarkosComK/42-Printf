@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   print_dec_wz.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marsoare <marsoare@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 14:17:58 by marsoare          #+#    #+#             */
-/*   Updated: 2024/04/28 17:28:55 by marsoare         ###   ########.fr       */
+/*   Created: 2024/05/01 14:07:08 by marsoare          #+#    #+#             */
+/*   Updated: 2024/05/04 21:02:20 by marsoare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	print_dec_wz(long number, int prec)
 {
-	int	i;
+	int	count;
+	int	len;
 
-	i = 0;
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	while (str[i])
-		write(1, &str[i++], 1);
-	return (i);
+	count = 0;
+	len = numlen(number);
+	if (number < 0)
+	{
+		count += ft_putchar('-');
+		number = -number;
+	}
+	while (count < prec - len)
+		count += ft_putchar('0');
+	count += print_unsigned_dec(number);
+	return (count);
 }
